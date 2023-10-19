@@ -1,0 +1,40 @@
+﻿@model LoginModel;
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="https://img.freepik.com/premium-photo/man-woman-sit-front-clock-that-says-time-is-10-00_910054-3317.jpg" alt="Image" class="img-fluid">
+			</div>
+			<div class="col-md-6 contents">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="mb-4">
+							<h3>Login in</h3>
+							<p class="mb-4">Login with with your  email id</p>
+						</div>
+						<form asp-action="Login">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+							<div class="form-group">
+								<label asp-for="Email" class="control-label"></label>
+								<input asp-for="Email" class="form-control" />
+								<span asp-validation-for="Email" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Password" class="control-label"></label>
+								<input asp-for="Password" class="form-control" />
+								<span asp-validation-for="Password" class="text-danger"></span>
+							</div>
+
+							<div class="form-group">
+								<input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
+								<a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Cancel</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
